@@ -1,1 +1,12 @@
-@import 'inc/variables';
+@import 'base/_reset';
+@import 'base/_typography';
+@import 'helpers/_variables';
+@import 'helpers/_mixins';
+@import 'helpers/_functions';
+@import 'helpers/_placeholders';
+@import 'modules/_grid';
+@import 'modules/_header';
+@import 'modules/_cards';
+@import 'modules/_footer';
+@import 'pages/_home';
+@import 'pages/_undirsida';
