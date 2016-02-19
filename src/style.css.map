@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEA,IAAK;EACJ,KAAK,ECDC,OAAO",
+"sources": ["style.scss","inc/variables.scss"],
+"names": [],
+"file": "style.css"
+}
