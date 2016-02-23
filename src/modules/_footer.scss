@@ -21,5 +21,15 @@ footer {
 	color: $white;
 	text-decoration: none
 }
+.social {
+	display: flex;
+	justify-content: center;
+}
+.social-container {
+	width: 240px;
+	display: flex;
+	justify-content: space-between;
+	margin: 30px 0 0 0;
+}
 /*	END of Footer
 -----------------------*/
