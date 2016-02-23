@@ -6,14 +6,13 @@
 			<meta name="author" content="Sundlaugar.is">
 			<meta name="description" content="Sundlaugar.is er nýr vefur til að auðvelda fólki að fynna upplýsingar um sundlaugar landsins">
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
-			<!-- vanntar logo í tab
-			<link rel="icon" type="image/png" href="https://cdn.tix.is/tix/20160126/Content/Images/favicon.png">
-			-->
 			<link rel="shortcut icon" type="image/x-icon" href="img/pool.ico">
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+			<script src="https://www.amcharts.com/lib/3/ammap.js"></script>
+			<script src="https://www.amcharts.com/lib/3/themes/patterns.js"></script>
 			<link rel="stylesheet" type="text/css" href="src/style.css">
 			<title>Sundlaugar.is</title>
 		</head>
@@ -31,17 +30,18 @@
 			</nav>
 			<div class="main">
 				<div class="jumbotron">
-					<div class="map"></div>
-					<div class="search">
-						<div class="box">
-						  <div class="container-4">
-						    <input type="search" id="search" placeholder="Hvar langar þér í sund?" />
-						    <button class="icon"><i class="fa fa-search"></i></button>
-						  </div>
+					<div class="jumbotron-container">
+						<div id="chartdiv"></div>
+						<div class="search">
+							<div class="box">
+							  <div class="container-4">
+							    <input type="search" id="search" placeholder="Hvar langar þér í sund?" />
+							    <button class="icon"><i class="fa fa-search"></i></button>
+							  </div>
+							</div>
 						</div>
+						<div class="options"></div>
 					</div>
-					<div class="options"></div>
-					
 				</div>
 				<div class="container-fluid wrap">
 					<div class="row">
@@ -102,4 +102,5 @@
 			    </div>
 			</footer>
 		</body>
+		<script src="js/script.js"></script>
 	</html>
