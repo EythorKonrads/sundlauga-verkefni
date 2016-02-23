@@ -1,0 +1,23 @@
+/*	navigation
+------------------*/
+.top-container {
+	width: 95%;
+	display: flex;
+	justify-content: space-between;
+	box-sizing: border-box;
+	margin-left: 2.5%;
+	padding-top: 15px;
+	@include Fira;
+	font-size: 30px;
+	color: $blue;
+}
+.top-container div a {
+	text-decoration: none;
+}
+
+.time {
+	font-size: 24px;
+	padding-top: 5px;
+}
+/*	END of navigation
+-----------------------*/

@@ -9,70 +9,80 @@
 			<!-- vanntar logo í tab
 			<link rel="icon" type="image/png" href="https://cdn.tix.is/tix/20160126/Content/Images/favicon.png">
 			-->
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 			<link rel="stylesheet" type="text/css" href="src/style.css">
 			<title>Sundlaugar.is</title>
 
 
 		</head>
 		<body>
-			<nav class='navbar navbar-fixed-top top-navigation'>
-				<div class="container-fluid">
-				    <div class="navbar-header logo">
-				      <a class="navbar-brand" href="#">Sundlaugar.is</a>
+			<nav class='navbar top-navigation'>
+				<div class="top-container">
+				    <div class="logo">
+				      <a class="logo-link" href="index.html">Sundlaugar.is</a>
 				    </div>
-				    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-				      <ul class="nav navbar-nav navbar-right side-navigation">
-				        <li ><a class="dot-navigation" href="pages/tonlist.html">Finna sundlaug</a></li>
-				      </ul>
-				    </div>			    
+					    <div class="time">Mánudagurinn 15. febrúar klukkan 14:29</div>
+				    <div class="finna">
+				      <a class="" href="index.html">Finna sundlaug</a></li>
+				    </div>		    
 				</div>
 			</nav>
-			<div class="jumbotron">
-				<div class="map"></div>
-				<div class="search"></div>
-				<div class="options"></div>
-				
-			</div>
-			<div class="container-fluid wrap">
-				<div class="row">
-					<div class="col-sm-4 alftanes">
-						<div class="kort-img alftanes-img">
-						</div>
-						<div class="info">
-							<h2>Álftaneslaug</h2>						
-							<h3>6:30 - 22:00</h3>
+			<div class="main">
+				<div class="jumbotron">
+					<div class="map"></div>
+					<div class="search">
+						<div class="box">
+						  <div class="container-4">
+						    <input type="search" id="search" placeholder="Hvar langar þér í sund?" />
+						    <button class="icon"><i class="fa fa-search"></i></button>
+						  </div>
 						</div>
 					</div>
-					<div class="col-sm-4 arbaer">
-						<div class="kort-img arbaer-img">
+					<div class="options"></div>
+					
+				</div>
+				<div class="container-fluid wrap">
+					<div class="row">
+						<div class="col-1-3 mobile-col-1-1 alftanes">
+							<div class="kort-img alftanes-img">
+							</div>
+							<div class="info">
+								<h2>Álftaneslaug</h2>						
+								<h3>6:30 - 22:00</h3>
+							</div>
 						</div>
-						<div class="info">
-							<h2>Árbæjarlaug</h2>						
-							<h3>6:30 - 22:00</h3>
+						<div class="col-1-3 mobile-col-1-1 arbaer">
+							<div class="kort-img arbaer-img">
+							</div>
+							<div class="info">
+								<h2>Árbæjarlaug</h2>						
+								<h3>6:30 - 22:00</h3>
+							</div>
 						</div>
-					</div>
-					<div class="col-sm-4 asvalla">
-						<div class="kort-img asvalla-img">
-						</div>
-						<div class="info">
-							<h2>Ásvallarlaug</h2>						
-							<h3>6:30 - 22:00</h3>
+						<div class="col-1-3 mobile-col-1-1 asvalla">
+							<div class="kort-img asvalla-img">
+							</div>
+							<div class="info">
+								<h2>Ásvallarlaug</h2>						
+								<h3>6:30 - 22:00</h3>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 			<footer class="footer bs-docs-footer">
 			    <div>
-			        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
-				      <ul class="nav navbar-nav">
-				        <li ><a class="dot-navigation" href="pages/frettir.html">Fréttir</a></li>
-				        <li><a class="dot-navigation" href="pages/frettabref.html">Fréttabréf</a></li>
-				        <li><a class="dot-navigation" href="pages/heitarlaugar.html">Heitarlaugar</a></li>
-				        <li><a class="dot-navigation" href="pages/sundkennsla.html">Sundkennsla</a></li>
-				        <li><a class="dot-navigation" href="pages/umSundlaugar.html">Um Sundlaugar.is</a></li>
-				        <li><a class="dot-navigation" href="pages/hafaSamband.html">Hafa Samband</a></li>
+			        <div class="footer-navigation">
+				      <ul class="container-footer">
+				        <li><a href="pages/frettir.html">Fréttir</a></li>
+				        <li><a href="pages/frettabref.html">Fréttabréf</a></li>
+				        <li><a href="pages/heitarlaugar.html">Heitarlaugar</a></li>
+				        <li><a href="pages/sundkennsla.html">Sundkennsla</a></li>
+				        <li><a href="pages/umSundlaugar.html">Um Sundlaugar.is</a></li>
+				        <li><a href="pages/hafaSamband.html">Hafa Samband</a></li>
 				      </ul>
 				    </div>
 					<div>
