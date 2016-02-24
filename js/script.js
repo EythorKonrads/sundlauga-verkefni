@@ -56,10 +56,11 @@ AmCharts.ready( function() {
             if ( area.showAsSelected ) {
                 states.push( area.title );
             }
-            // for (area.title = "Norðurland eystra") {
-            // 	console.log("test");
-            // }
-                    }
+            for (var i=0; i < states.length; i++) {
+				console.log(states[i]);
+			}	
+        }
+                  	
         console.log(states);
     } );
     map.export = {
@@ -226,7 +227,7 @@ $(function(){
   });    
 });
 
-
+// Leitarvélin
 $('#search').hideseek({
   nodata: 'Því miður fannst ekkert með þessum leitarskilyrðum',
   navigation: true
