@@ -11,19 +11,28 @@ body {
 .jumbotron {
 	background-color: $blue;
 	width: 100%;
-	height: 300px;
+	height: 320px;
+	margin-bottom: 0;
 }
 .jumbotron-container {
 	display: flex;
 	justify-content: space-between;
-	width: 90%;
-	margin-left: 5%;
+	width: 95%;
+	margin-left: 2.5%;
 }
 
 /*	Interactive map
 -------------------------*/
+.landakort {
+	width: 25%;
+	height: 220px;
+	color: $white;
+	font-size: 24px;
+	text-align: center;
+	Z-index: 300;
+}
 #chartdiv {
-	width: 30%;
+	width: 100%;
 	height: 220px;
 	font-size: 11px;
 }	
@@ -33,12 +42,17 @@ body {
 ------------------*/
 .container-4{
 	overflow: hidden;
-	width: 460px;
+	width: 350px;
+	margin-left: -110px;
+	margin-top: 80px;
 	vertical-align: middle;
 	white-space: nowrap;
 }
+.search {
+	Z-index: 300;
+}
 .container-4 input#search{
-	width: 460px;
+	width: 350px;
 	height: 60px;
 	background: $white;
 	border: none;
@@ -47,7 +61,7 @@ body {
 	float: left;
 	color: $blue;
 	padding-left: 15px;
-	padding-top: 18px;
+	padding-top: 10px;
 	border-radius: 5px;
 }
 .container-4 input#search::-webkit-input-placeholder {
@@ -72,7 +86,7 @@ body {
 .container-4:focus button.icon{
 	outline: none;
 	opacity: 1;
-	margin-left: -50px;
+	margin-left: -60px;
 }
  
   .container-4:hover button.icon:hover{
@@ -83,12 +97,80 @@ body {
 ------------------*/
 /*	Search fillters
 -------------------------*/
-.options {
-	width: 190px;
-	height: 230px;
+.controls {
+	width: 220px;
+	height: 260px;
 	background-color: $white;
 	border: 1px solid $black;
 	border-radius: 4px;
+	Z-index: 300;
+}
+fieldset h4 {
+	margin: 10px 0 0 20px;
+	font-size: 18px;
+}
+.checkbox label{
+	margin-left:10px;
+	font-size: 14px;
+}
+.checkbox label:after{
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  background: #68b8c4;
+  opacity: 0;
+  pointer-events: none;
+}
+.checkbox input[type=checkbox], .checkbox-inline input[type=checkbox], .radio input[type=radio], .radio-inline input[type=radio] {
+    margin-left: 10px;
+}
+.checkbox input {
+	border: 2px solid $black;
+}
+.Container .fail-message{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  
+  -webkit-transition: 150ms;
+  -moz-transition: 150ms;
+  transition: 150ms;
+}
+
+.Container .fail-message:before{
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%;
+}
+
+.Container .fail-message span{
+  display: inline-block;
+  vertical-align: middle;
+  @include Fira;
+  color: $white;
+  font-size: 20px;
+}
+
+.Container.fail .fail-message{
+  opacity: 1;
+  pointer-events: auto;
 }
 /*	END of Search fillters
 -------------------------*/
+
+@media screen and (min-width: 768px) {
+	.jumbotron {
+	    padding-top: 30px; 
+	    padding-bottom: 0; 
+	}
+}

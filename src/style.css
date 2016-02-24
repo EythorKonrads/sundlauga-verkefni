@@ -298,6 +298,7 @@ body {
 .col-1-3 {
   height: 380px;
   margin-left: 2.5%;
+  margin-top: 30px;
   background-color: #1f5f9d; }
 
 .kort-img {
@@ -307,6 +308,7 @@ body {
 .info {
   width: 100%;
   height: 120px;
+  padding-top: 30px;
   text-align: center;
   bottom: 0;
   font-family: 'Fira Sans', sans-serif;
@@ -314,13 +316,53 @@ body {
   font-size: 30px;
   color: #ffffff; }
 
+.info a {
+  color: #ffffff;
+  text-decoration: none; }
+
+[class*='col-'] {
+  padding-right: 0; }
+
+#Container .mix {
+  display: none; }
+
+.laugardals {
+  background: url(../img/laugardals.jpg) no-repeat center center; }
+
+.alftanes {
+  background: url(../img/alftanes.jpg) no-repeat center center; }
+
+.arbaer {
+  background: url(../img/arbaer.jpg) no-repeat center center; }
+
+.asvalla {
+  background: url(../img/asvalla.jpg) no-repeat center center; }
+
+.breidholt {
+  background: url(../img/breidholt.jpg) no-repeat center center; }
+
+.grafarvogs {
+  background: url(../img/grafarvogs.jpg) no-repeat center center; }
+
+.sundholl {
+  background: url(../img/sundholl.jpg) no-repeat center center; }
+
+.vesturbaejar {
+  background: url(../img/vesturbaejar.jpg) no-repeat center center; }
+
+.laugavatn {
+  background: url(../img/laugavatn.jpg) no-repeat center center; }
+
+.blaalonid {
+  background: url(../img/blaalonid.jpg) no-repeat center center; }
+
 @media handheld, only screen and (max-width: 767px) {
   .col-1-3 {
     margin-left: 0; } }
 /*		Footer
 -----------------------*/
 footer {
-  height: 200px;
+  height: 180px;
   width: 100%;
   text-align: center;
   background-color: #1f5f9d;
@@ -360,25 +402,34 @@ body {
 /*	Footer festur ni├░ri
 -------------------------*/
 .main {
-  min-height: calc(100vh - 260px); }
+  min-height: calc(100vh - 240px); }
 
 /*	END of Footer festur ni├░ri
 --------------------------------*/
 .jumbotron {
   background-color: #1f5f9d;
   width: 100%;
-  height: 300px; }
+  height: 320px;
+  margin-bottom: 0; }
 
 .jumbotron-container {
   display: flex;
   justify-content: space-between;
-  width: 90%;
-  margin-left: 5%; }
+  width: 95%;
+  margin-left: 2.5%; }
 
 /*	Interactive map
 -------------------------*/
+.landakort {
+  width: 25%;
+  height: 220px;
+  color: #ffffff;
+  font-size: 24px;
+  text-align: center;
+  Z-index: 300; }
+
 #chartdiv {
-  width: 30%;
+  width: 100%;
   height: 220px;
   font-size: 11px; }
 
@@ -388,12 +439,17 @@ body {
 ------------------*/
 .container-4 {
   overflow: hidden;
-  width: 460px;
+  width: 350px;
+  margin-left: -110px;
+  margin-top: 80px;
   vertical-align: middle;
   white-space: nowrap; }
 
+.search {
+  Z-index: 300; }
+
 .container-4 input#search {
-  width: 460px;
+  width: 350px;
   height: 60px;
   background: #ffffff;
   border: none;
@@ -403,7 +459,7 @@ body {
   float: left;
   color: #1f5f9d;
   padding-left: 15px;
-  padding-top: 18px;
+  padding-top: 10px;
   border-radius: 5px; }
 
 .container-4 input#search::-webkit-input-placeholder {
@@ -428,7 +484,7 @@ body {
 .container-4:focus button.icon {
   outline: none;
   opacity: 1;
-  margin-left: -50px; }
+  margin-left: -60px; }
 
 .container-4:hover button.icon:hover {
   background: #a1a0a0;
@@ -438,14 +494,76 @@ body {
 ------------------*/
 /*	Search fillters
 -------------------------*/
-.options {
-  width: 190px;
-  height: 230px;
+.controls {
+  width: 220px;
+  height: 260px;
   background-color: #ffffff;
   border: 1px solid #3b3a36;
-  border-radius: 4px; }
+  border-radius: 4px;
+  Z-index: 300; }
+
+fieldset h4 {
+  margin: 10px 0 0 20px;
+  font-size: 18px; }
+
+.checkbox label {
+  margin-left: 10px;
+  font-size: 14px; }
+
+.checkbox label:after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  background: #68b8c4;
+  opacity: 0;
+  pointer-events: none; }
+
+.checkbox input[type=checkbox], .checkbox-inline input[type=checkbox], .radio input[type=radio], .radio-inline input[type=radio] {
+  margin-left: 10px; }
+
+.checkbox input {
+  border: 2px solid #3b3a36; }
+
+.Container .fail-message {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: 150ms;
+  -moz-transition: 150ms;
+  transition: 150ms; }
+
+.Container .fail-message:before {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  height: 100%; }
+
+.Container .fail-message span {
+  display: inline-block;
+  vertical-align: middle;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+  font-size: 20px; }
+
+.Container.fail .fail-message {
+  opacity: 1;
+  pointer-events: auto; }
 
 /*	END of Search fillters
 -------------------------*/
+@media screen and (min-width: 768px) {
+  .jumbotron {
+    padding-top: 30px;
+    padding-bottom: 0; } }
 
 /*# sourceMappingURL=style.css.map */

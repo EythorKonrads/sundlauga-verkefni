@@ -3,3 +3,9 @@
 	font-family: 'Fira Sans', sans-serif;
 	font-weight: 300; 
 }
+
+@mixin bg-img($class) {
+	.#{$class} {
+		background: url(../img/#{$class}.jpg) no-repeat center center;
+	}
+}

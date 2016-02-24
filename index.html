@@ -13,6 +13,9 @@
 			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 			<script src="https://www.amcharts.com/lib/3/ammap.js"></script>
 			<script src="https://www.amcharts.com/lib/3/themes/patterns.js"></script>
+			<script src="js/jquery.mixitup.js"></script>
+			<script src="js/jquery.hideseek.min.js"></script>
+			<script src="js/icelandLow.js"></script>
 			<link rel="stylesheet" type="text/css" href="src/style.css">
 			<title>Sundlaugar.is</title>
 		</head>
@@ -22,7 +25,7 @@
 				    <div class="logo">
 				      <a class="logo-link" href="index.html">Sundlaugar.is</a>
 				    </div>
-					    <div class="time">Mánudagurinn 15. febrúar klukkan 14:29</div>
+					    <div class="time"><p id="time"></p></div>
 				    <div class="finna">
 				      <a class="" href="index.html">Finna sundlaug</a></li>
 				    </div>		    
@@ -31,42 +34,159 @@
 			<div class="main">
 				<div class="jumbotron">
 					<div class="jumbotron-container">
+						<div class="landakort">
+						<h4>Veldu landshluta</h4>
 						<div id="chartdiv"></div>
+						</div>
 						<div class="search">
 							<div class="box">
 							  <div class="container-4">
-							    <input type="search" id="search" placeholder="Hvar langar þér í sund?" />
+							    <input type="search" id="search" placeholder="Hvar langar þér í sund?" data-list=".list" data-toggle="hideseek"/>
 							    <button class="icon"><i class="fa fa-search"></i></button>
 							  </div>
 							</div>
 						</div>
-						<div class="options"></div>
+						<form class="controls" id="Filters">
+							<fieldset>
+							  <h4>Veldu opnunartíma</h4>
+							  <div class="checkbox">
+							      <input type="checkbox" value=".opid-nuna"/>
+							      <label>Opið núna</label>
+							   </div>
+							  <div class="checkbox">
+							      <input type="checkbox" value=".opnar-snemma"/>
+							      <label>Opnar snemma</label>
+							   </div>
+							   <div class="checkbox">
+							      <input type="checkbox" value=".opid-lengur"/>
+							      <label>Opið lengur</label>
+							   </div>
+							   </fieldset>
+							   <fieldset>
+							   <h4>Fleirri valmöguleikar</h4>
+							   <div class="checkbox">
+							      <input type="checkbox" value=".heitar-laugar"/>
+							      <label>Heitarlaugar</label>
+							   </div>
+							  <div class="checkbox">
+							      <input type="checkbox" value=".gufubad"/>
+							      <label>Gufubað</label>
+							   </div>
+							   <div class="checkbox">
+							      <input type="checkbox" value=".heitur-pottur"/>
+							      <label>Heitur pottur</label>
+							   </div>
+							   <div class="checkbox">
+							      <input type="checkbox" value=".sundlaug"/>
+							      <label>Sundlaug</label>
+							   </div>
+							</fieldset>
+						</form>   
 					</div>
 				</div>
-				<div class="container-fluid wrap">
-					<div class="row">
-						<div class="col-1-3 mobile-col-1-1 alftanes">
-							<div class="kort-img alftanes-img">
+				<div class="container-fluid wrap Container" id="Container">
+					<div class="fail-message">
+						<span>Því miður fannst ekkert með þessum leitarskilyrðum</span>
+					</div>
+					<div class=" list row">
+						<div class="col-1-3 mobile-col-1-1 mix gufubad heitur-pottur sundlaug opnar-snemma opid-lengur" data-myorder="1">
+							<div class="kort-img laugardals">
 							</div>
 							<div class="info">
-								<h2>Álftaneslaug</h2>						
-								<h3>6:30 - 22:00</h3>
+								<a href="">
+									<h2>Laugardalslaug</h2>						
+									<h3>6:30 - 22:00</h3>
+								</a>
 							</div>
 						</div>
-						<div class="col-1-3 mobile-col-1-1 arbaer">
-							<div class="kort-img arbaer-img">
+						<div class="col-1-3 mobile-col-1-1 mix gufubad heitur-pottur sundlaug opnar-snemma opid-lengur" data-myorder="2" data-atribute="">
+							<div class="kort-img arbaer">
 							</div>
 							<div class="info">
-								<h2>Árbæjarlaug</h2>						
-								<h3>6:30 - 22:00</h3>
+								<a href="">
+									<h2>Árbæjarlaug</h2>						
+									<h3>6:30 - 22:00</h3>
+								</a>
 							</div>
 						</div>
-						<div class="col-1-3 mobile-col-1-1 asvalla">
-							<div class="kort-img asvalla-img">
+						<div class="col-1-3 mobile-col-1-1 mix gufubad heitur-pottur sundlaug opnar-snemma" data-myorder="3">
+							<div class="kort-img asvalla">
 							</div>
 							<div class="info">
+								<a href="">
 								<h2>Ásvallarlaug</h2>						
-								<h3>6:30 - 22:00</h3>
+								<h3>6:30 - 21:00</h3>
+								</a>
+							</div>
+						</div>
+						<div class="col-1-3 mobile-col-1-1 mix gufubad heitur-pottur sundlaug opnar-snemma opid-lengur" data-myorder="4">
+							<div class="kort-img breidholt">
+							</div>
+							<div class="info">
+								<a href="">
+									<h2>Breiðholtslaug</h2>						
+									<h3>6:30 - 22:00</h3>
+								</a>
+							</div>
+						</div>
+						<div class="col-1-3 mobile-col-1-1 mix gufubad heitur-pottur sundlaug opnar-snemma opid-lengur" data-myorder="5">
+							<div class="kort-img grafarvogs">
+							</div>
+							<div class="info">
+								<a href="">
+									<h2>Grafarvogslaug</h2>						
+									<h3>6:30 - 22:00</h3>
+								</a>
+							</div>
+						</div>
+						<div class="col-1-3 mobile-col-1-1 mix gufubad heitur-pottur sundlaug opnar-snemma opid-lengur" data-myorder="6">
+							<div class="kort-img sundholl">
+							</div>
+							<div class="info">
+								<a href="">
+									<h2>Sundhöll Reykjavíkur</h2>						
+									<h3>6:30 - 22:00</h3>
+								</a>
+							</div>
+						</div>
+						<div class="col-1-3 mobile-col-1-1 mix gufubad heitur-pottur sundlaug opnar-snemma opid-lengur" data-myorder="7">
+							<div class="kort-img vesturbaejar">
+							</div>
+							<div class="info">
+								<a href="">
+									<h2>Vesturbæjarlaug</h2>						
+									<h3>6:30 - 22:00</h3>
+								</a>
+							</div>
+						</div>
+						<div class="col-1-3 mobile-col-1-1 mix gufubad heitur-pottur sundlaug opnar-snemma" data-myorder="8">
+							<div class="kort-img alftanes">
+							</div>
+							<div class="info">
+								<a href="">
+								<h2>Álftaneslaug</h2>						
+								<h3>6:30 - 20:30</h3>
+								</a>
+							</div>
+						</div>
+						<div class="col-1-3 mobile-col-1-1 mix gufubad heitur-pottur sundlaug" data-myorder="9">
+							<div class="kort-img laugavatn">
+							</div>
+							<div class="info">
+								<a href="">
+								<h2>Sundlaugin á Laugavatni</h2>						
+								<h3>17:00 - 20:00</h3>
+								</a>
+							</div>
+						</div>
+						<div class="col-1-3 mobile-col-1-1 mix gufubad heitur-pottur heitar-laugar" data-myorder="10">
+							<div class="kort-img blaalonid">
+							</div>
+							<div class="info">
+								<a href="">
+								<h2>Bláa Lónið</h2>						
+								<h3>9:00 - 20:00</h3>
+								</a>
 							</div>
 						</div>
 					</div>
