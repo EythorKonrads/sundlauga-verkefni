@@ -1,0 +1,79 @@
+.jumbotron-img {
+	background: linear-gradient(
+      rgba(31, 95, 157, 0.5), 
+      rgba(31, 95, 157, 0.5)), 
+      url(../img/laugardalslaug.jpg) no-repeat center center;
+	background-size: 100%;
+	height: 550px;
+}
+.sundlaug-info {
+	text-align: center;
+	vertical-align: middle;
+	line-height: 100px;
+	width: 100%;
+	height: 120px;
+	padding-top: 0px;
+	text-align: center;
+	bottom: 0;
+	@include Fira;
+	font-size: 36px;
+	color: $white;
+}
+.sundlaug-info h2{
+	margin-top: 150px;
+}
+.alert {
+	margin-top: 30px;
+	margin-bottom: 0;
+	background-color: $red;
+	color: $white;
+	text-align: center;
+	h2 {
+		padding: 15px 0 20px 0;
+		font-size: 24px;
+	}
+	p {
+		line-height: 1.5em;
+		padding: 0 15px 15px 15px;
+	}
+}
+.blue-box {
+	margin-top: 30px;
+	background-color: $blue;
+	color: $white;
+	h2, h3, h4, p{
+		margin: 0 0px 0 30px;
+		padding: 10px 30px 10px 0;
+		line-height: 1.5em;
+	}
+	h2 {
+		font-size: 24px;
+	}
+	h3 {
+		font-size: 20px;
+	}
+	h4, p {
+		font-size: 18px;
+	}
+}
+.google-map,
+.stadsetning {
+	width: 50%;
+	height: 100%;
+}
+.white-box {
+	height: 100%;
+	margin-top: 30px;
+	border: 1px solid $black;
+	h2, p {
+		margin-left: 30px;
+		padding: 10px 30px 10px 0px;
+		line-height: 1.5em;
+	}
+	h2 {
+		font-size: 24px;
+	}
+	p {
+		font-size: 18px;
+	}
+}

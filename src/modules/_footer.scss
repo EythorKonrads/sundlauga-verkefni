@@ -33,3 +33,11 @@ footer {
 }
 /*	END of Footer
 -----------------------*/
+@media screen and (max-width: 768px) {
+	footer {
+		height: $footer-height - 60px;
+	}	
+	.container-footer {
+		display: none;
+	}
+}

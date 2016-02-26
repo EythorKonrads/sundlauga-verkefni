@@ -1,0 +1,158 @@
+<!doctype html>
+
+	<html lang="is">
+		<head>
+			<meta charset="utf-8">
+			<meta name="author" content="Sundlaugar.is">
+			<meta name="description" content="Sundlaugar.is er nýr vefur til að auðvelda fólki að fynna upplýsingar um sundlaugar landsins">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<link rel="shortcut icon" type="image/x-icon" href="img/pool.ico">
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+			<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+			<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+			<script src="https://www.amcharts.com/lib/3/ammap.js"></script>
+			<script src="https://www.amcharts.com/lib/3/themes/patterns.js"></script>
+			<script src="js/jquery.mixitup.js"></script>
+			<script src="js/jquery.hideseek.min.js"></script>
+			<script src="js/moment.js"></script>
+			<script src="js/icelandLow.js"></script>
+			<link rel="stylesheet" type="text/css" href="src/style.css">
+			<title>Sundlaugar.is</title>
+		</head>
+		<body>
+			<nav class='navbar top-navigation'>
+				<div class="top-container">
+				    <div class="logo">
+				      <a class="logo-link" href="index.html">Sundlaugar.is</a>
+				    </div>
+					    <div class="time"><p id="time"></p></div>
+				    <div class="finna">
+				      <a class="" href="index.html">Finna sundlaug</a></li>
+				    </div>	
+				</div>
+				<button class="hamburger">&#9776;</button>
+				<button class="cross">&#735;</button>
+				<div class="menu">
+				  <ul>
+				    <li><a href="pages/frettir.html">Fréttir</a></li>
+			        <li><a href="pages/frettabref.html">Fréttabréf</a></li>
+			        <li><a href="pages/heitarlaugar.html">Heitarlaugar</a></li>
+			        <li><a href="pages/sundkennsla.html">Sundkennsla</a></li>
+			        <li><a href="pages/umSundlaugar.html">Um Sundlaugar.is</a></li>
+			        <li><a href="pages/hafaSamband.html">Hafa Samband</a></li>
+				  </ul>
+				</div> 	    
+			</nav>
+			<div class="main">
+				<div class="jumbotron jumbotron-img">
+					<div class="sundlaug-info"> 
+						<h2>Laugardalslaug</h2>						
+						<h3>Opið í dag frá 6:30 til 22:00</h3>
+					</div>
+				</div>
+				<div class="container-fluid wrap Container grid" id="Container">
+					<div class="col-1-1 mobile-col-1-1 alert">
+							<h2>Lokað vegna viðgerða frá 20. mars til 2. apríl</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam nec lacus quis nulla accumsan tristique. Vestibulum id dui bibendum, dignissim velit vel, auctor velit. Quisque semper arcu enim, at lobortis enim mollis sit amet. Pellentesque molestie metus vitae justo tincidunt aliquet. Nullam tempor sapien nec lorem suscipit, in pharetra enim tempor. Fusce placerat dui vel lacus auctor egestas. In vel metus et elit tincidunt molestie. Aenean sed arcu nulla. Maecenas consectetur varius sapien, quis dictum elit tincidunt ac. Mauris a pulvinar</p>
+					</div>
+					<div class="col-1-2 mobile-col-1-1 blue-box">
+							<h2>Opnunartími</h2>
+							<h3>Mánudaga - fimmtudaga: kl. 6:30 - 22:00<br>Föstudaga: kl. 6:30 - 22:00<br>Helgar: kl. 8:00 - 22:00</h3>					
+					</div>
+					<div class="col-1-2 mobile-col-1-1 blue-box push-right">
+						<h2>Verðskrá</h2>
+						<h3>Gildir frá 1. janúar 2015</h3>
+						<h4>0 – 6 ára: 0 kr.<br>
+							Stakt gjald börn 6–18 ára*: 140 kr.<br>
+							Stakt gjald fullorðnir: 900 kr.<br>
+							70 ára og eldri: 0 kr.<br></h4>
+						<h4>10 miða kort barna**: 950 kr.<br>
+							10 miða kort fullorðnir **: 4.300 kr.<br>
+							20 miða kort fullorðnir **: 7.800 kr.<br>
+							6 mánaða kort barna: 6.200 kr.<br>
+							6 mánaða kort fullorðinna: 17.100 kr.<br>
+							Árskort barna: 10.000 kr.<br>
+							Árskort fullorðinna: 31.000 kr.<br></h4>
+						<p>Öryrkjar eru ekki gjaldskyldir gegn framvísun skírteinis gefið út af Sjálfsbjörgu, félagi fatlaðra í Reykjavík, sem skal endurnýjað árlega.
+							Einnig eru þeir ekki gjaldskyldir sem framvísa skírteini Tryggingastofnunar ríkisins „grænu skírteini“ vegna varanlegrar örorku, skírteini Blindrafélags „bláu skírteini“ og umönnunarkorti „gulu skírteini“ vegna sérstakrar umönnunar barns.</p>
+						<h4>Leiga á handklæði: 550 kr.<br>
+							Leiga á sundfötum: 800 kr.<br>
+							Tilboð - sund, handklæði, sundföt: 1.450 kr.<br></h4>
+						<h4>Útgáfa á rafrænu handhafakorti: 700 kr <br>
+							Endurútgáfa á persónugerðu korti: 700 kr<br> 
+							Brautarleiga vegna kennslu: 4.920 kr<br>
+							* Börn byrja að greiða 1. júní árið sem þau verða 6 ára.<br> 
+							** Hver áfylling tíu- og tuttugumiða korta gildir í 36 mánuði.<br></h4>			
+					</div>
+					<div class="col-1-2 mobile-col-1-1 blue-box">
+						<div class="google-map pull-left">
+							<div style='overflow:hidden;height:320px;width:340px;'>
+								<div id='gmap_canvas' style='height:320px;width:340px;'>	
+								</div>
+						<style>#gmap_canvas img{max-width:100% !important;background:100% !important}</style>
+						</div>
+						<script type='text/javascript'>function init_map(){var myOptions = {zoom:14,center:new google.maps.LatLng(64.145850, -21.879676),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(64.145850, -21.879676)});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script>
+						</div>
+						<div class="stadsetning pull-right">
+							<h2>Laugardalslaug</h2>
+							<h3>Sundlaugarvegur 30<br>
+								105 Reykjavík<br>
+								Sími 411 5100<br>
+							</h3>
+							<p>							
+								Forstöðumaður: Logi Sigurfinnsson.<br>
+								Rekstarstjóri: Bjarni Kjartansson.<br>
+							</p>				
+						</div>
+					</div>
+					<div class="col-1-2 mobile-col-1-1 white-box">
+							<h2>Innilaug</h2>
+							<p>Innisundlaugin er fyrst og fremst fyrir æfingar og skólasund en á eftirtöldum tímum gefst almenningi kostur á að njóta innilaugarinnar.
+							Uppsetning laugarinnar getur verið mismunandi  50m brautir, 25m brautir langsum eða þversum allt eftir aðstæðum hverju sinni og fer það eftir dagskrár laugarinnar.
+							Almenningur er velkominn í innilaug á eftirfarandi tímum:
+							mánudaga - fimmtudaga frá klukkan 8:00 til 15:00,
+							laugardaga og sunnudaga frá klukkan 12:00 til 21:00 nema þegar mót fara fram.
+							</p>				
+					</div>
+					<div class="col-1-2 mobile-col-1-1 white-box">
+							<h2>Strætisvagnar</h2>
+							<p>Þeir strætisvagnar sem stoppa nálægt Laugardalslaug eru: Leiðir 12 og 14.<br>
+								Nánari upplýsingar um ferðir má finna á vef <a href="http://www.straeto.is/">Strætó</a>.
+							</p>				
+					</div>
+				</div>
+			</div>
+			<footer class="footer bs-docs-footer">
+			    <div>
+			        <div class="footer-navigation">
+				      <ul class="container-footer">
+				        <li><a href="pages/frettir.html">Fréttir</a></li>
+				        <li><a href="pages/frettabref.html">Fréttabréf</a></li>
+				        <li><a href="pages/heitarlaugar.html">Heitarlaugar</a></li>
+				        <li><a href="pages/sundkennsla.html">Sundkennsla</a></li>
+				        <li><a href="pages/umSundlaugar.html">Um Sundlaugar.is</a></li>
+				        <li><a href="pages/hafaSamband.html">Hafa Samband</a></li>
+				      </ul>
+				    </div>
+					<div>
+			            <nav class="navigation social">
+			                <ul class="social-container">
+			                	<li class="facebook">
+			                		<a href="https://www.facebook.com/sundlaugar"><img src="img/facebook.png"></a>
+			                	</li>
+			                	<li class="twitter">
+			                		<a href="https://twitter.com/sundlaugar"><img src="img/twitter.png"></a>
+			                	</li>
+			                	<li class="instagram">
+			                		<a href="https://instagram.com/sundlaugar"><img src="img/instagram.png"></a>
+			                	</li>
+			                </ul>
+			            </nav>
+			        </div>
+			    </div>
+			</footer>
+		</body>
+		<script src="js/script.js"></script>
+	</html>

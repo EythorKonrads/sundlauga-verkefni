@@ -1,10 +1,12 @@
 body {
 	@include Fira;
 }
+
 /*	Footer festur niðri
 -------------------------*/
 .main{
- min-height: calc(100vh - #{$header-height + $footer-height});
+ 	min-height: calc(100vh - #{$header-height + $footer-height});
+ 	overflow: hidden;
 }
 /*	END of Footer festur niðri
 --------------------------------*/
@@ -13,6 +15,8 @@ body {
 	width: 100%;
 	height: 320px;
 	margin-bottom: 0;
+	padding-top: 30px; 
+	padding-bottom: 0;
 }
 .jumbotron-container {
 	display: flex;
@@ -24,6 +28,7 @@ body {
 /*	Interactive map
 -------------------------*/
 .landakort {
+	display: inline-block;
 	width: 25%;
 	height: 220px;
 	color: $white;
@@ -168,9 +173,20 @@ fieldset h4 {
 /*	END of Search fillters
 -------------------------*/
 
-@media screen and (min-width: 768px) {
-	.jumbotron {
-	    padding-top: 30px; 
-	    padding-bottom: 0; 
+@media screen and (max-width: 768px) {
+	.landakort,
+	.controls,
+	.time,
+	.finna {
+		display: none;
+	}
+	.container-4{
+	margin-top: 80px;
+	}
+	.jumbotron-container {
+	display: flex;
+	justify-content: center;
+	width: 80%;
+	margin-left: 20%;
 	}
 }

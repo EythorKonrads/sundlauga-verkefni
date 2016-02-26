@@ -1,6 +1,24 @@
 //--------- Dagsetning ------------
 
 document.getElementById("time").innerHTML = moment().format('LLLL');
+
+// Hamburger menu
+$( ".cross" ).hide();
+$( ".menu" ).hide();
+$( ".hamburger" ).click(function() {
+	$( ".menu" ).slideToggle( "slow", function() {
+		$( ".hamburger" ).hide();
+		$( ".cross" ).show();
+	});
+});
+
+$( ".cross" ).click(function() {
+	$( ".menu" ).slideToggle( "slow", function() {
+		$( ".cross" ).hide();
+		$( ".hamburger" ).show();
+	});
+});
+
 // ----------Map-----------
 
 var map;
@@ -51,7 +69,15 @@ AmCharts.ready( function() {
 				console.log(states[i]);
 			}	
         }
-                  	
+        var states = states.toString().toLowerCase();
+        states = states.replace(/\s+/g, '');
+        states = states.replace(/,/g, ',.')
+        if ( states.length > 0){
+        $('#Container').mixItUp('filter', '.'+states);
+    	}
+        else if ( states.length == 0){
+        	return $('#Container').mixItUp('filter', '.höfuðborgarsvæðið, .vestfirðir, .suðurnes, .vesturland, .norðurlandvestra, .norðurlandeystra, .austurland, .suðurland');
+        }
         console.log(states);
     } );
     map.export = {
@@ -223,3 +249,4 @@ $('#search').hideseek({
   nodata: 'Því miður fannst ekkert með þessum leitarskilyrðum',
   navigation: true
 });
+
