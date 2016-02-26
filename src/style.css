@@ -356,6 +356,15 @@ body {
 .blaalonid {
   background: url(../img/blaalonid.jpg) no-repeat center center; }
 
+.hellulaug {
+  background: url(../img/hellulaug.jpg) no-repeat center center; }
+
+.hella {
+  background: url(../img/hella.jpg) no-repeat center center; }
+
+.stykkis {
+  background: url(../img/stykkis.jpg) no-repeat center center; }
+
 @media handheld, only screen and (max-width: 767px) {
   .col-1-3 {
     margin-left: 0; } }
@@ -496,7 +505,7 @@ body {
 -------------------------*/
 .controls {
   width: 220px;
-  height: 260px;
+  height: 270px;
   background-color: #ffffff;
   border: 1px solid #3b3a36;
   border-radius: 4px;

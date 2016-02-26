@@ -1,7 +1,6 @@
 //--------- Dagsetning ------------
 
-var d = new Date();
-document.getElementById("time").innerHTML = d.toUTCString();
+document.getElementById("time").innerHTML = moment().format('LLLL');
 // ----------Map-----------
 
 var map;
@@ -14,14 +13,6 @@ AmCharts.ready( function() {
     var dataProvider = {
         map: "icelandLow",
         getAreasFromMap: true,
-		// zoomControl: {
-		//     panControlEnabled: false,
-		//     zoomControlEnabled: false,
-		//      homeButtonEnabled:false
-		//   },
-		//   "export": {
-		//     "enabled": true
-		//   }
     };
     map.dataProvider = dataProvider;
 
