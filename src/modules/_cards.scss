@@ -1,3 +1,5 @@
+/* 	Sundlaugakortinn 
+--------------------------*/
 .col-1-3{
 	height: 380px;
 	margin-left: 2.5%;
@@ -28,6 +30,7 @@
 #Container .mix{
 	display: none;
 }
+/* @mixin bg-img fyrir sundlaugakortinn */
 @include bg-img(laugardals);
 @include bg-img(alftanes);
 @include bg-img(arbaer);
@@ -41,10 +44,16 @@
 @include bg-img(hellulaug);
 @include bg-img(hella);
 @include bg-img(stykkis);
-
+@include bg-img(egilsstada);
+@include bg-img(eskifirdi);
+@include bg-img(dalvik);
+@include bg-img(blonduos);
 @media handheld, only screen and (max-width: 767px) {
 
 	.col-1-3 {
 		margin-left: 0;
 	}	
 }
+
+/* 	END of Sundlaugakortinn 
+-------------------------------*/

@@ -1,3 +1,5 @@
+/*	  Undirsíða
+--------------------*/
 .jumbotron-img {
 	background: linear-gradient(
       rgba(31, 95, 157, 0.5), 
@@ -61,6 +63,10 @@
 	width: 50%;
 	height: 100%;
 }
+#gmap_canvas img {
+	max-width:100% !important;
+	background:100% !important
+}
 .white-box {
 	height: 100%;
 	margin-top: 30px;
@@ -77,3 +83,5 @@
 		font-size: 18px;
 	}
 }
+/*	 END of Undirsíða
+-------------------------*/

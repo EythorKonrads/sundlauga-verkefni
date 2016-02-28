@@ -28,7 +28,7 @@
 				    </div>
 					    <div class="time"><p id="time"></p></div>
 				    <div class="finna">
-				      <a class="" href="index.html">Finna sundlaug</a></li>
+				      <a class="" href="index.html">Finna sundlaug</a>
 				    </div>	
 				</div>
 				<button class="hamburger">&#9776;</button>
@@ -59,7 +59,7 @@
 							  </div>
 							</div>
 						</div>
-						<form class="controls" id="Filters">
+						<form class="controls controls-desktop" id="Filters">
 							<fieldset>
 							  <h4>Veldu opnunartíma</h4>
 							  <div class="checkbox">
@@ -94,7 +94,26 @@
 							      <label>Sundlaug</label>
 							   </div>
 							</fieldset>
-						</form>   
+						</form> 
+						<div class="controls controls-mobile"> 
+						  <select id="FilterSelect">
+						  	<option value="all">Velja landshluta</option>
+						    <option value=".höfuðborgarsvæðið">Höfuðborgarsvæðið</option>
+						    <option value=".suðurland">Suðurland</option>
+						    <option value=".suðurnes">Reykjanes</option>
+						    <option value=".vesturland">Vesturland</option>
+						    <option value=".vestfirðir">Vestfirðir</option>
+						    <option value=".norðurlandvestra">Norðurland vestra</option>
+						    <option value=".norðurlandeystra">Norðurland eystra</option>
+						    <option value=".austurland">Austurland</option>
+						  </select>
+						  <select id="FilterSelect2">
+						  	<option value="all">Velja opnunartíma</option>
+						    <option value=".opid-nuna">Opið núna</option>
+						    <option value=".opnar-snemma">Opnar snemma</option>
+						    <option value=".opid-lengur">Opið lengur</option>
+						  </select>
+						</div>  
 					</div>
 				</div>
 				<div class="container-fluid wrap Container" id="Container">
@@ -103,14 +122,14 @@
 					</div>
 					<div class=" list row">
 						<div class="col-1-3 mobile-col-1-1 mix gufubad heitur-pottur sundlaug opnar-snemma opid-lengur höfuðborgarsvæðið" data-myorder="1">
-							<div class="kort-img laugardals">
-							</div>
-							<div class="info">
-								<a href="laugardalslaug.html">
-									<h2>Laugardalslaug</h2>						
-									<h3>6:30 - 22:00</h3>
-								</a>
-							</div>
+							<a href="laugardalslaug.html">
+								<div class="kort-img laugardals">
+								</div>
+								<div class="info">								
+										<h2>Laugardalslaug</h2>						
+										<h3>6:30 - 22:00</h3>
+								</div>
+							</a>
 						</div>
 						<div class="col-1-3 mobile-col-1-1 mix gufubad heitur-pottur sundlaug opnar-snemma opid-lengur höfuðborgarsvæðið" data-myorder="2">
 							<div class="kort-img arbaer">
@@ -202,13 +221,13 @@
 								</a>
 							</div>
 						</div>
-						<div class="col-1-3 mobile-col-1-1 mix heitur-pottur heitar-laugar vestfirðir" data-myorder="11">
+						<div class="col-1-3 mobile-col-1-1 mix heitur-pottur heitar-laugar vestfirðir opid-nuna" data-myorder="11">
 							<div class="kort-img hellulaug">
 							</div>
 							<div class="info">
 								<a href="">
 								<h2>Hellulaug</h2>						
-								<h3>&#x221e</h3>
+								<h3>&#x221e;</h3>
 								</a>
 							</div>
 						</div>
@@ -232,6 +251,46 @@
 								</a>
 							</div>
 						</div>
+						<div class="col-1-3 mobile-col-1-1 mix gufubad heitur-pottur sundlaug opnar-snemma austurland" data-myorder="14">
+							<div class="kort-img egilsstada">
+							</div>
+							<div class="info">
+								<a href="">
+								<h2>Sundlaugin á Egilsstöðum</h2>						
+								<h3>06:30 - 20:30</h3>
+								</a>
+							</div>
+						</div>
+						<div class="col-1-3 mobile-col-1-1 mix gufubad heitur-pottur sundlaug opnar-snemma austurland" data-myorder="15">
+							<div class="kort-img eskifirdi">
+							</div>
+							<div class="info">
+								<a href="">
+								<h2>Sundlaugin á Eskifirði</h2>						
+								<h3>06:00 - 20:00</h3>
+								</a>
+							</div>
+						</div>
+						<div class="col-1-3 mobile-col-1-1 mix gufubad heitur-pottur sundlaug opnar-snemma norðurlandeystra" data-myorder="16">
+							<div class="kort-img dalvik">
+							</div>
+							<div class="info">
+								<a href="">
+								<h2>Sundlaugin á Dalvík</h2>						
+								<h3>06:15 - 20:00</h3>
+								</a>
+							</div>
+						</div>
+						<div class="col-1-3 mobile-col-1-1 mix gufubad heitur-pottur sundlaug norðurlandvestra" data-myorder="17">
+							<div class="kort-img blonduos">
+							</div>
+							<div class="info">
+								<a href="">
+								<h2>Sundlaugin Blönduósi</h2>						
+								<h3>08:00 - 21:00</h3>
+								</a>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -251,19 +310,19 @@
 			            <nav class="navigation social">
 			                <ul class="social-container">
 			                	<li class="facebook">
-			                		<a href="https://www.facebook.com/sundlaugar"><img src="img/facebook.png"></a>
+			                		<a href="https://www.facebook.com/sundlaugar"><img src="img/facebook.png" alt="Facebook"></a>
 			                	</li>
 			                	<li class="twitter">
-			                		<a href="https://twitter.com/sundlaugar"><img src="img/twitter.png"></a>
+			                		<a href="https://twitter.com/sundlaugar"><img src="img/twitter.png" alt="Twitter"></a>
 			                	</li>
 			                	<li class="instagram">
-			                		<a href="https://instagram.com/sundlaugar"><img src="img/instagram.png"></a>
+			                		<a href="https://instagram.com/sundlaugar"><img src="img/instagram.png" alt="Instagram"></a>
 			                	</li>
 			                </ul>
 			            </nav>
 			        </div>
 			    </div>
 			</footer>
+			<script src="js/script.js"></script>
 		</body>
-		<script src="js/script.js"></script>
 	</html>

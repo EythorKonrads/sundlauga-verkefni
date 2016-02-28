@@ -19,12 +19,15 @@
 	font-size: 24px;
 	padding-top: 5px;
 }
+/*	Hiding hamburger nav for desktop */
 .hamburger,
 .cross,
 .menu {
 	display: none;
 }
+/*	mobile */
 @media screen and (max-width: 768px) {
+	/*	hamburger menu */
 	.hamburger{
 		display: inline-block;
 		background:none;
@@ -109,6 +112,7 @@
 		margin-top:5px; 
 		margin:0 auto;
 	}
+	/*	END of hamburger menu */
 }
 /*	END of navigation
 -----------------------*/

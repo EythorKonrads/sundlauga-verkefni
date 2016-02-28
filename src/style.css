@@ -272,6 +272,8 @@ body {
     display: none !important;
     width: 0;
     height: 0; } }
+/* END of simple grid
+-------------------------*/
 /*	navigation
 ------------------*/
 .top-container {
@@ -293,12 +295,15 @@ body {
   font-size: 24px;
   padding-top: 5px; }
 
+/*	Hiding hamburger nav for desktop */
 .hamburger,
 .cross,
 .menu {
   display: none; }
 
+/*	mobile */
 @media screen and (max-width: 768px) {
+  /*	hamburger menu */
   .hamburger {
     display: inline-block;
     background: none;
@@ -379,9 +384,13 @@ body {
     color: white;
     font-size: 1.5em;
     margin-top: 5px;
-    margin: 0 auto; } }
+    margin: 0 auto; }
+
+  /*	END of hamburger menu */ }
 /*	END of navigation
 -----------------------*/
+/* 	Sundlaugakortinn 
+--------------------------*/
 .col-1-3 {
   height: 380px;
   margin-left: 2.5%;
@@ -413,6 +422,7 @@ body {
 #Container .mix {
   display: none; }
 
+/* @mixin bg-img fyrir sundlaugakortinn */
 .laugardals {
   background: url(../img/laugardals.jpg) no-repeat center center; }
 
@@ -452,9 +462,23 @@ body {
 .stykkis {
   background: url(../img/stykkis.jpg) no-repeat center center; }
 
+.egilsstada {
+  background: url(../img/egilsstada.jpg) no-repeat center center; }
+
+.eskifirdi {
+  background: url(../img/eskifirdi.jpg) no-repeat center center; }
+
+.dalvik {
+  background: url(../img/dalvik.jpg) no-repeat center center; }
+
+.blonduos {
+  background: url(../img/blonduos.jpg) no-repeat center center; }
+
 @media handheld, only screen and (max-width: 767px) {
   .col-1-3 {
     margin-left: 0; } }
+/* 	END of Sundlaugakortinn 
+-------------------------------*/
 /*		Footer
 -----------------------*/
 footer {
@@ -489,7 +513,7 @@ footer {
   justify-content: space-between;
   margin: 30px 0 0 0; }
 
-/*	END of Footer
+/*	Footer for mobile
 -----------------------*/
 @media screen and (max-width: 768px) {
   footer {
@@ -497,6 +521,8 @@ footer {
 
   .container-footer {
     display: none; } }
+/*	END of Footer
+-----------------------*/
 body {
   font-family: 'Fira Sans', sans-serif;
   font-weight: 300; }
@@ -600,7 +626,10 @@ body {
 ------------------*/
 /*	Search fillters
 -------------------------*/
-.controls {
+.controls-mobile {
+  display: none; }
+
+.controls-desktop {
   width: 220px;
   height: 270px;
   background-color: #ffffff;
@@ -667,6 +696,8 @@ fieldset h4 {
 
 /*	END of Search fillters
 -------------------------*/
+/*	Search, Fillters and Map for mobile
+-----------------------------------------*/
 @media screen and (max-width: 768px) {
   .landakort,
   .controls,
@@ -675,13 +706,33 @@ fieldset h4 {
     display: none; }
 
   .container-4 {
-    margin-top: 80px; }
+    margin-top: 80px;
+    margin: 0 auto;
+    display: block; }
 
   .jumbotron-container {
+    display: block;
+    width: 100%;
+    margin: 0 auto; }
+
+  .jumbotron {
+    height: 155px; }
+
+  /*	Filters for mobile */
+  .controls-mobile {
     display: flex;
     justify-content: center;
-    width: 80%;
-    margin-left: 20%; } }
+    width: 100%;
+    margin-top: 10px; }
+
+  #FilterSelect {
+    margin-right: 10px; }
+
+  /*	END of Filters for mobile */ }
+/*	END of Search, Fillters and Map for mobile
+------------------------------------------------*/
+/*	  Undirs├¡├░a
+--------------------*/
 .jumbotron-img {
   background: linear-gradient(rgba(31, 95, 157, 0.5), rgba(31, 95, 157, 0.5)), url(../img/laugardalslaug.jpg) no-repeat center center;
   background-size: 100%;
@@ -737,6 +788,10 @@ fieldset h4 {
   width: 50%;
   height: 100%; }
 
+#gmap_canvas img {
+  max-width: 100% !important;
+  background: 100% !important; }
+
 .white-box {
   height: 100%;
   margin-top: 30px;
@@ -749,5 +804,8 @@ fieldset h4 {
     font-size: 24px; }
   .white-box p {
     font-size: 18px; }
+
+/*	 END of Undirs├¡├░a
+-------------------------*/
 
 /*# sourceMappingURL=style.css.map */

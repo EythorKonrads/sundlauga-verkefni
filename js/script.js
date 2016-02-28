@@ -243,6 +243,21 @@ $(function(){
     }
   });    
 });
+// Mix it up for mobile
+$(function(){
+  var $filterSelect = $('#FilterSelect'),
+  	  $filterSelect2 = $('#FilterSelect2'),
+      $container = $('#Container');
+  
+  $container.mixItUp();
+  
+  $filterSelect.on('change', function(){
+    $container.mixItUp('filter', this.value);
+  });
+  $filterSelect2.on('change', function(){
+    $container.mixItUp('filter', this.value);
+  });
+});
 
 // Leitarvélin
 $('#search').hideseek({
