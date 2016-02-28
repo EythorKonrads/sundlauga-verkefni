@@ -49,7 +49,7 @@
 		line-height: 1.5em;
 	}
 	h2 {
-		font-size: 24px;
+		font-size: 30px;
 	}
 	h3 {
 		font-size: 20px;
@@ -77,10 +77,59 @@
 		line-height: 1.5em;
 	}
 	h2 {
-		font-size: 24px;
+		font-size: 30px;
 	}
 	p {
 		font-size: 18px;
+	}
+}
+.phone-container {
+		display: none;
+	}
+@media screen and (max-width: 768px) {
+	.jumbotron-img {
+		background-size: 100%;
+		height: 240px;
+	}
+	.sundlaug-info {
+		text-align: center;
+		vertical-align: middle;
+		line-height: 70px;
+		width: 100%;
+		height: 120px;
+		font-size: 28px;
+	}
+	.sundlaug-info h2{
+		margin-top: 0px;
+	}
+	.phone-container {
+		width: 100px;
+		height: 100px;
+		display: block;
+	}
+	.phone {
+		background: url(../img/phone.png) no-repeat center center;
+		background-size: 100%;
+	}
+	.google-map {
+		display: none;
+	}
+	.blue-box,
+	.white-box {
+		h2 {
+		font-size: 24px;
+		}
+	}
+	.blue-box {
+		h3 {
+			font-size: 18px;
+		}
+		h4, p {
+			font-size: 16px;
+		}
+	}
+	.stadsetning {
+		width: 100%;
 	}
 }
 /*	 END of Undirsíða
